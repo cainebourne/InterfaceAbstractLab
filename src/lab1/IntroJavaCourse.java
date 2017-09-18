@@ -8,14 +8,17 @@ import javax.swing.JOptionPane;
  * @author      Troy Wadina
  * @version     1.00
  */
-public class IntroJavaCourse extends IntroToProgrammingCourse {
+public class IntroJavaCourse extends CourseInfo {
 //    private String courseName;
 //    private String courseNumber;
 //    double credits;
     private String prerequisites;
 
     public IntroJavaCourse(String prerequisites, String courseName, String courseNumber, double credits) {
-        super(courseName, courseNumber, credits);
+       // super(courseName, courseNumber, credits);
+        setCourseName(courseName);
+        setCourseNumber(courseNumber);
+        setCredits(credits); 
         setPrerequisites(prerequisites);
         
     }
@@ -76,6 +79,9 @@ public class IntroJavaCourse extends IntroToProgrammingCourse {
         this.prerequisites = prerequisites;
     }
 
-        
+    @Override
+    public void enroll() {
+        System.out.println("enrolled in Intro to Java");
+    }    
 
 }

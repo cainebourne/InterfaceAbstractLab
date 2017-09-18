@@ -8,17 +8,18 @@ import javax.swing.JOptionPane;
  * @author      your name goes here
  * @version     1.00
  */
-public class IntroToProgrammingCourse {
+public class IntroToProgrammingCourse implements CourseInfo{
     private String courseName;
     private String courseNumber;
     private double credits;
 
-    public IntroToProgrammingCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
+    public IntroToProgrammingCourse(String courseName, String courseNumber, double credits) {
+        setCourseName(courseName);
+        setCourseNumber(courseNumber);
+        setCredits(credits);
     }
 
-    public String getCourseNumber() {
+     public String getCourseNumber() {
         return courseNumber;
     }
 
@@ -35,7 +36,7 @@ public class IntroToProgrammingCourse {
         return credits;
     }
 
-    public void setCredits(double credits) {
+    public final void setCredits(double credits) {
         if(credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,
                     "Error: credits must be in the range 0.5 to 4.0");
@@ -57,5 +58,11 @@ public class IntroToProgrammingCourse {
         this.courseName = courseName;
     }
 
+    @Override
+    public void enroll() {
+        System.out.println("Enroll in Intro to Programming");
+    }
+    
+  
     
 }

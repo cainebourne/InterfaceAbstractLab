@@ -8,10 +8,16 @@ import javax.swing.JOptionPane;
  * @author      Troy Wadina
  * @version     1.00
  */
-public class AdvancedJavaCourse extends IntroJavaCourse {
+public class AdvancedJavaCourse extends CourseInfo {
+    
+    private String prerequisites;
 
     public AdvancedJavaCourse(String prerequisites, String courseName, String courseNumber,  double credits) {
-        super(prerequisites, courseName, courseNumber, credits);
+       // super(prerequisites, courseName, courseNumber, credits);
+        setCourseName(courseName);
+        setCourseNumber(courseNumber);
+        setCredits(credits);
+        setPrerequisites(prerequisites);
     }
 //    private String courseName;
 //    private String courseNumber;
@@ -20,18 +26,18 @@ public class AdvancedJavaCourse extends IntroJavaCourse {
 
     
 
-//    public String getPrerequisites() {
-//        return prerequisites;
-//    }
-//
-//    public final void setPrerequisites(String prerequisites) {
-//        if(prerequisites == null || prerequisites.length() == 0) {
-//            JOptionPane.showMessageDialog(null,
-//                    "Error: prerequisites cannot be null of empty string");
-//            System.exit(0);
-//        }
-//        this.prerequisites = prerequisites;
-//    }
+    public String getPrerequisites() {
+        return prerequisites;
+    }
+
+    public final void setPrerequisites(String prerequisites) {
+        if(prerequisites == null || prerequisites.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null of empty string");
+            System.exit(0);
+        }
+        this.prerequisites = prerequisites;
+    }
 //
 //    public double getCredits() {
 //        return credits;
@@ -73,5 +79,10 @@ public class AdvancedJavaCourse extends IntroJavaCourse {
 //        
 //        this.courseNumber = courseNumber;
 //    }
+
+        @Override
+        public void enroll() {
+            System.out.println("enrolled in Advanced Java");
+        }
     
 }

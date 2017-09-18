@@ -61,4 +61,9 @@ public class IntroToProgrammingCourse extends CourseInfo {
 //    }
 //
 //    
+
+    @Override
+    public void enroll() {
+        System.out.println("enrolled in Intro To Programming Course");
+    }
 }

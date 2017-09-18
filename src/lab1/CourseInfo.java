@@ -56,5 +56,5 @@ public abstract class CourseInfo {
         this.courseName = courseName;
     }
     
-    
+    public abstract void enroll();
 }
