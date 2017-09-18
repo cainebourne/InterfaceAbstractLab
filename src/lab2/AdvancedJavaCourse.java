@@ -38,6 +38,11 @@ public class AdvancedJavaCourse extends IntroToProgrammingCourse implements Cour
         }
         this.prerequisites = prerequisites;
     }
+    
+    @Override
+    public void enroll() {
+        System.out.println("Enroll in Advanced Java");
+    }
 
 //    public String getCourseNumber() {
 //        return courseNumber;

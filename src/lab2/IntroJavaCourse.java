@@ -36,10 +36,10 @@ import javax.swing.JOptionPane;
         this.prerequisites = prerequisites;
     }
 
-//    @Override
-//    public void enroll() {
-//        System.out.println("enrolled in Intro to Java");
-//    }    
+    @Override
+    public void enroll() {
+        System.out.println("enrolled in Intro to Java");
+    }    
 
 //    public String getCourseNumber() {
 //        return courseNumber;
